@@ -1,4 +1,12 @@
 // Assignment Code
+
+// user input variables
+var confirmLowercase
+var confirmUppercase
+var confirmCharacter
+var enter
+var confirmNumber
+
 // global variable for char arrays
 
 var lowercase = [
@@ -59,7 +67,7 @@ var uppercase = [
   'Z',
 ]
 
-var numeric = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+var numeric = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
 var specChar = [
   '?',
