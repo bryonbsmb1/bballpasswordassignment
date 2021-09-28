@@ -1,78 +1,67 @@
-// Assignment Code
 
-// user input variables
-var confirmLowercase
-var confirmUppercase
-var confirmCharacter
-var enter
-var confirmNumber
+var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
-// global variable for char arrays
+// Array of lowercase characters to be included in password
+var lowerCasedCharacters = [
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "o",
+  "p",
+  "q",
+  "r",
+  "s",
+  "t",
+  "u",
+  "v",
+  "w",
+  "x",
+  "y",
+  "z",
+];
+// Array of uppercase characters to be included in password
+var upperCasedCharacters = [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "H",
+  "I",
+  "J",
+  "K",
+  "L",
+  "M",
+  "N",
+  "O",
+  "P",
+  "Q",
+  "R",
+  "S",
+  "T",
+  "U",
+  "V",
+  "W",
+  "X",
+  "Y",
+  "Z",
+];
 
-var lowercase = [
-  'a',
-  'b',
-  'c',
-  'd',
-  'e',
-  'f',
-  'g',
-  'h',
-  'i',
-  'j',
-  'k',
-  'l',
-  'm',
-  'n',
-  'o',
-  'p',
-  'q',
-  'r',
-  's',
-  't',
-  'u',
-  'v',
-  'w',
-  'x',
-  'y',
-  'z',
-]
-
-var uppercase = [
-  'A',
-  'B',
-  'C',
-  'D',
-  'E',
-  'F',
-  'G',
-  'H',
-  'I',
-  'J',
-  'K',
-  'L',
-  'M',
-  'N',
-  'O',
-  'P',
-  'Q',
-  'R',
-  'S',
-  'T',
-  'U',
-  'V',
-  'W',
-  'X',
-  'Y',
-  'Z',
-]
-
-var numeric = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-
-var specChar = [
+var specialCharacters = [
   '?',
-  ':',
-  ',',
   '@',
   '%',
   '+',
@@ -82,6 +71,8 @@ var specChar = [
   '#',
   '$',
   '^',
+  ':',
+  ',',
   ')',
   '(',
   '}',
@@ -92,24 +83,42 @@ var specChar = [
   '-',
   '_',
   '.',
-]
+];
 
-// function with a series of prompts
-function pwdCriteria() {}
 
-// function to generate password
 
-function generatePassword() {}
 
-var generateBtn = document.querySelector('#generate')
+function pwCriteria (){ 
+  var pwLength = parseInt (prompt("Choose a password between 8 and 128 characters"))
+
+if(pwLength<8 || pwLength>128 || Number.isNaN(pwLength)) {alert("Your password needs to be a number between 8 and 128 Characters");
+return;}
+
+
+
+
+}
+function generatePassword (){
+
+pwCriteria()
+
+}
+
+// Assignment Code
+var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword()
-  var passwordText = document.querySelector('#password')
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
 
-  passwordText.value = password
+  passwordText.value = password;
+
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener('click', writePassword)
+generateBtn.addEventListener("click", writePassword);
+
+
+
+
