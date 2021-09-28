@@ -94,7 +94,17 @@ function pwCriteria (){
 if(pwLength<8 || pwLength>128 || Number.isNaN(pwLength)) {alert("Your password needs to be a number between 8 and 128 Characters");
 return;}
 
+var lowerChoice = confirm("click OK if you want lowercase characters");
+var upperChoice = confirm("click OK if you want uppercase characters");
+var numChoice = confirm("click OK if you want numbers");
+var specChoice = confirm("click OK if you want special characters");
 
+if(lowerChoice ===false &&
+  upperChoice ===false &&
+  numChoice ===false&&
+  specChoice ===false){
+    alert('please choose at least one Character type')
+  }
 
 
 }
